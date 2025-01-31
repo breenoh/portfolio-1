@@ -1,0 +1,302 @@
+:root {
+    --cor-azul: #0702CF;
+    --cor-azulzin: #C4D6D6;
+    --cor-rosa: #EFDFD0;
+    --cor-branco: #F2F2F2;
+    --cor-escuro: #162334;
+}
+
+
+
+* {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--cor-escuro);
+}
+
+.principal {
+    display: flex;
+    height: 100vh;
+
+}
+
+.esq {
+
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px 2px #ffffff28;
+}
+
+.dir {
+
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 20px 40px 20px;
+}
+
+/* Perfil LADO esquerdo */
+
+.perfil {
+    margin: 0 4%;
+}
+
+.perfil img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+h1 {
+    font-size: 26px;
+    margin: 20px 0 0 0;
+    text-align: center;
+    color: var(--cor-branco);
+}
+
+h2 {
+    font-size: 16px;
+    text-align: center;
+    color: var(--cor-branco);
+}
+
+/* sobre-socials */
+
+.sobre-socials {
+    margin: 0 4%;
+    color: var(--cor-branco);
+}
+
+.sobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.p-sobre {
+    margin: 20px 0;
+}
+
+.box-tec {
+    text-align: left;
+    border: 1px solid rgba(255, 255, 255, 0.219);
+    border-radius: 10px;
+    width: 70%;
+    box-shadow: 0 0 2px 1px #ffffff28;
+}
+
+.tec-title {
+    margin: 0;
+    font-size: 14px;
+    padding: 8px;
+    color: rgba(255, 255, 255, 0.555);
+}
+
+.tecnologia {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 30px;
+    padding: 0 0 20px 0;
+}
+
+.icon-tec {
+    text-align: center;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+    margin: 20px 0;
+
+}
+
+
+.socials a {
+    border: 1px solid var(--cor-branco);
+    border-radius: 15px;
+    padding: 7px 22px;
+    text-decoration: none;
+    color: var(--cor-branco);
+    transition: .2s;
+    box-shadow: 0 0 10px 1px #ffffff28;
+}
+
+.socials a:hover {
+    background-color: var(--cor-branco);
+    color: var(--cor-escuro);
+
+}
+
+
+/* PARTE DIREITA NOS PROJETOS */
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+span {
+    color: #FFC000;
+}
+
+.img-proj {
+    height: 300px;
+    width: 700px;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 5s;
+    cursor: pointer;
+    position: relative;
+    border-radius: 10px;
+    border: 1px solid white;
+    box-shadow: 0 0 20px 2px #ffffff28;
+}
+
+.img-proj:hover {
+    background-position: 100% 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000088;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+    opacity: 0;
+    transition: .5s;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+/* dentro do overlay (descricão) */
+
+.desc-proj {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.desc-proj-d {
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+    font-size: 14px;
+}
+
+
+/* MEDIA QUERIE CELULAR 375px*/
+
+@media (max-width: 768px) {
+    .principal {
+        flex-direction: column;
+    }
+
+    .esq {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .perfil {
+        margin: 4% 4%;
+    }
+
+    .p-sobre {
+        margin: 0px 4%;
+    }
+
+    .img-proj {
+        height: 200px;
+        width: 320px;
+    }
+
+
+    .tec-title {
+        margin: 0px;
+        padding: 6px;
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.555);
+    }
+
+    .tecnologia {
+        justify-content: space-evenly;
+        padding: 0 0 10px 0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .principal {
+        flex-direction: row;
+    }
+
+    .esq {
+        margin: 70px 10px;
+        padding: 10px;
+    }
+
+    .img-proj {
+        height: 200px;
+        width: 310px;
+    }
+
+
+}
+
+@media (min-width: 1024px) {
+    .principal {
+        flex-direction: row;
+    }
+
+    .img-proj {
+        height: 200px;
+        width: 400px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .img-proj {
+        height: 250px;
+        width: 650px;
+    }
+}
